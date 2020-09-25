@@ -1,0 +1,192 @@
+<div class="bgcolor">
+
+  <!-- <div class="left-sidebar">側邊欄
+      <div class="left-img"><img src="assets/icons/ic_elderly-face@2x.png" alt></div>
+      <div class="left-img"><img src="assets/icons/ic_info@2x.png" alt></div>
+      <div class="left-img"><img src="assets/icons/ic_privacy@2x.png" alt></div>
+      <div class="left-img"><img src="assets/icons/ic_user@2x.png" alt></div>
+      <div class="left-img"><img src="assets/icons/ic_logout@2x.png" alt></div>
+    </div> -->
+
+  <div class="main">
+
+    <form nz-form novalidate formGroupName="validateForm">
+
+      <div class="top f-red f-bold"><label>*星號為必填欄位</label></div>
+      <div class="edit">
+
+        <!-- 左邊部位 -->
+        <div class="edit-left">
+          <label>
+            <p class="f-bold f-16 f-black">編輯住民資訊</p>
+          </label>
+          <nz-form-item>
+            <nz-form-label class="edit-01"><span>姓名</span><span class="f-red">*</span></nz-form-label>
+            <nz-form-control><input nz-input name="name" placeholder="姓名">
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label class="edit-01"><span>身份證</span></nz-form-label>
+            <nz-form-control><input nz-input name="identity" placeholder="身份證號碼">
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label class="edit-01"><span>性別</span></nz-form-label>
+            <nz-form-control>
+              <nz-switch [ngModel]="true" name="sex" nzCheckedChildren="男" nzUnCheckedChildren="女"></nz-switch>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label class="edit-01"><span>身高</span></nz-form-label>
+            <nz-form-control>
+              <nz-input-group class="edit-height-weight" nzSuffix="cm">
+                <input nz-input name="height" placeholder="身高" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label class="edit-01"><span>體重</span></nz-form-label>
+            <nz-form-control>
+              <nz-input-group class="edit-height-weight" nzSuffix="kg">
+                <input nz-input class="ant-input" type="text" name="weight" placeholder="體重" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label class="edit-01">
+              <span>出生日期</span><span class="f-red">*</span>
+            </nz-form-label>
+            <nz-form-control>
+              <nz-date-picker class="edit-date"></nz-date-picker>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label class="edit-01">
+              <span>入住日期</span><span class="f-red">*</span>
+            </nz-form-label>
+            <nz-form-control>
+              <nz-date-picker class="edit-date"></nz-date-picker>
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-label class="edit-01">
+              <span>離院日期</span><span class="f-red">*</span>
+            </nz-form-label>
+            <nz-form-control>
+              <nz-date-picker class="edit-date"></nz-date-picker>
+            </nz-form-control>
+          </nz-form-item>
+
+        </div>
+
+        <!-- 中間部位 -->
+        <div class="edit-intermediate">
+          <div class="edit-intermediate-01">
+            <label>
+              <p class="f-bold f-16 f-black">行動能力-行走</p>
+            </label>
+            <nz-form-control>
+              <nz-select nzAllowClear nzPlaceHolder="獨立行走 50 公尺以上">
+                <nz-option nzValue="0" nzLabel="獨立行走 50 公尺以上"></nz-option>
+                <nz-option nzValue="1" nzLabel="需要協助走 50 公尺以上"></nz-option>
+                <nz-option nzValue="2" nzLabel="不能走但能用輪椅移動 50 公尺"></nz-option>
+                <nz-option nzValue="3" nzLabel="完全協助"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </div>
+
+          <div class="edit-intermediate-02">
+            <label>
+              <p class="f-bold f-16 f-black">近兩個月是否跌倒</p>
+            </label>
+            <nz-form-control>
+              <nz-select nzPlaceHolder="無">
+                <nz-option nzValue="0" nzLabel="無"></nz-option>
+                <nz-option nzValue="1" nzLabel="有"></nz-option>
+              </nz-select>
+            </nz-form-control>
+          </div>
+
+          <div class="edit-intermediate-03">
+            <label>
+              <p class="f-bold f-16 f-black">編輯住民身體狀況</p>
+            </label>
+            <nz-form-control>
+              <nz-checkbox-group [(ngModel)]="checkOptionsOne" class="edit-i-03-checkbox" name="situation">
+              </nz-checkbox-group>
+            </nz-form-control>
+          </div>
+        </div>
+
+        <!-- 右邊的部位 -->
+        <div class="edit-right">
+          <div class="edit-right-01">
+            <label>
+              <p class="f-bold f-16 f-black">編輯床號與裝置資訊</p>
+            </label>
+
+            <nz-form-item>
+              <nz-form-label class="edit-02"><span>床號</span><span class="f-red f-bold"> *</span></nz-form-label>
+              <nz-form-control>
+                <nz-select class="edit-right-02" nzAllowClear nzPlaceHolder="-">
+                  <nz-option nzValue="101" nzLabel="101"></nz-option>
+                  <nz-option nzValue="102" nzLabel="102"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <nz-form-label class="edit-02"><span>生理資訊機器編號</span><span class="f-red f-bold"> *</span></nz-form-label>
+              <nz-form-control>
+                <nz-select class="edit-right-02" nzAllowClear nzPlaceHolder="-">
+                  <nz-option nzValue="xxx" nzLabel="xxx"></nz-option>
+                  <nz-option nzValue="xxx" nzLabel="xxx"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <nz-form-label class="edit-02"><span>體溫貼片機器編號</span><span class="f-red f-bold"> *</span></nz-form-label>
+              <nz-form-control>
+                <nz-select class="edit-right-02" nzAllowClear [nzDisabled]="true" nzPlaceHolder="-">
+                  <nz-option nzValue="xxx" nzLabel="xxx"></nz-option>
+                  <nz-option nzValue="xxx" nzLabel="xxx"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+
+            <nz-form-item>
+              <nz-form-label class="edit-02"></nz-form-label>
+              <nz-form-control>
+                <nz-select class="edit-right-02" nzAllowClear [nzDisabled]="true" nzPlaceHolder="-">
+                  <nz-option nzValue="xxx" nzLabel="xxx"></nz-option>
+                  <nz-option nzValue="xxx" nzLabel="xxx"></nz-option>
+                </nz-select>
+              </nz-form-control>
+            </nz-form-item>
+          </div>
+
+          <div>
+            <label>
+              <p class="edit-right-03 f-bold f-16 f-black">編輯特殊需求及注意事項</p>
+              <p>(*限100字 / 已輸入0字)</p>
+            </label>
+
+            <textarea nz-input [(ngModel)]="precautions" maxlength="100" placeholder="注意事项" rows="5" name="precautions"></textarea>
+          </div>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+<router-outlet></router-outlet>

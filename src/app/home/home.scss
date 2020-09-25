@@ -1,0 +1,225 @@
+.bgcolor {
+  background-color: rgb(240, 242, 245);
+  width: 100%;
+  // height: 100%;
+  position: absolute;
+}
+
+.left-sidebar {
+  width: 60px;
+  position: absolute;
+  height: 100%;
+  background: #434343;
+}
+
+.left-sidebar .left-img {
+  // width: 60px;
+  //   height: 100%;
+  margin-top: 20px;
+  display: flex;
+  // align-items: center;
+  justify-content: center;
+}
+
+.left-sidebar img {
+  width: 32px;
+  height: 32px;
+}
+
+.main {
+  background-color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px lightgray;
+  width: 1030px;
+  height: 620px;
+  margin: 30px 100px;
+  //   text-align:center;
+}
+
+.f-red {
+  color: #DE0000;
+}
+
+.f-black {
+  color: #000;
+}
+
+.f-16 {
+  font-size: 16px;
+}
+
+.f-bold {
+  font-weight: bold;
+}
+
+.top {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
+.ant-form-item {
+  margin: 10px 0;
+  height: 40px;
+}
+
+.ant-form-item-label {
+  text-align: left;
+}
+
+::ng-deep .ant-form-item-label label::after {
+  content: ' ';
+}
+
+::ng-deep .ant-form-item-control-input-content {
+  max-width: 70%;
+}
+
+.edit {
+  padding-left: 20px;
+  width: 1030px;
+}
+
+.edit-left {
+  float: left;
+  width: 300px;
+  height: 530px;
+  border-right: 1px solid lightgray;
+}
+
+.edit-01 {
+  width: 40%;
+}
+
+.edit-height-weight {
+  width: 70%;
+}
+
+.edit-date {
+  width: 120%;
+}
+
+input:focus,
+input:hover {
+  border-color: #1C8247;
+  box-shadow: none;
+}
+
+.ant-input-affix-wrapper:hover,
+.ant-input-affix-wrapper-focused {
+  border-color: #1C8247;
+  box-shadow: none;
+}
+
+::ng-deep .ant-switch,
+.ant-switch-checked {
+  background-color: #555;
+}
+
+::ng-deep .ant-picker-focused,
+.ant-picker:hover {
+  border-color: #1C8247;
+  box-shadow: none;
+}
+
+.edit-intermediate {
+  float: left;
+  margin-left: 30px;
+  width: 320px;
+  height: 530px;
+  border-right: 1px solid lightgray;
+}
+
+.edit-intermediate-01 {
+  width: 270px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.edit-intermediate-01 nz-select {
+  margin: 0 8px 10px 0;
+  width: 220px;
+}
+
+::ng-deep .ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #1C8247;
+}
+
+::ng-deep .ant-select-focused.ant-select-single:not(.ant-select-customize-input) .ant-select-selector {
+  border-color: #1C8247;
+  box-shadow: none;
+}
+
+.edit-intermediate-02 {
+  width: 270px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.edit-intermediate-02 nz-select {
+  margin: 0 8px 10px 0;
+  width: 80px;
+}
+
+.edit-intermediate-03 {
+  width: 270px;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  // border-bottom: 1px solid lightgray;
+}
+
+::ng-deep .ant-checkbox-checked .ant-checkbox-inner {
+  background-color: #1C8247;
+  border-color: #1C8247;
+}
+
+::ng-deep .ant-checkbox-wrapper:hover .ant-checkbox-inner {
+  border-color: #1C8247;
+}
+
+::ng-deep .ant-checkbox-group-item {
+  margin-right: 15px;
+  width: 90px;
+  height: 40px;
+}
+
+.edit-i-03-checkbox {
+  width: 320px;
+}
+
+.edit-right {
+  float: left;
+  margin-left: 30px;
+  width: 300px;
+  height: 530px;
+  // border-right: 1px solid lightgray;
+}
+
+.edit-right-01 {
+  width: 300px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid lightgray;
+}
+
+.edit-02 {
+  width: 50%;
+}
+
+.edit-right-02 {
+  width: 130px;
+}
+
+.edit-right-03 {
+  padding-top: 20px;
+}
+
+.ant-input:hover,
+.ant-input:focus {
+  border-color: #1C8247;
+  box-shadow: none;
+}
+
+.edit-right textarea{
+  resize: none;
+}
